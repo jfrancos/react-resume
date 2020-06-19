@@ -20,7 +20,10 @@ function App() {
       </div>
       <div id="content">
         <Section title="Skills">
-          <div className='section'>Python, JavaScript, React, TypeScript, Emscripten, Linux, WebAudio/WebMidi, Node.js</div>
+          <div className="section">
+            Python, JavaScript, React, TypeScript, Emscripten, Linux,
+            WebAudio/WebMidi, Node.js
+          </div>
         </Section>
         <Section title="Employment">
           <SubSection
@@ -89,8 +92,8 @@ function App() {
                 WebAudio, and jQuery
               </li>
               <li>
-                Created a Node.js service which rendered MIDI data into an
-                audio file the user could download
+                Created a Node.js service which rendered MIDI data into an audio
+                file the user could download
               </li>
               <li>
                 Client review excerpts: “Highly skilled in both MIDI and
@@ -147,23 +150,50 @@ function App() {
           >
             <ul>
               <li>
-                AudioContext subclass / Emscripten transpiling of libvorbis, overrides decodeAudio to  decode ogg in any browser
+                AudioContext subclass / Emscripten transpiling of libvorbis,
+                overrides decodeAudio to decode ogg in any browser
               </li>
               <li>
-                Breaks out of the decode loop periodically, to keep the event loop going without the need for WebWorkers
+                Breaks out of the decode loop periodically, to keep the event
+                loop going without the need for WebWorkers
               </li>
             </ul>
           </SubSection>
-          <SubSection header={["Ear Sharpener", "React, iOS", "2009 – present"]}>
+          <SubSection
+            header={[
+              "Ear Sharpener",
+              "React (2019-present), iOS (2009-2018)",
+              "2009 – present",
+            ]}
+          >
             <ul>
-              <li></li>
-              <li></li>
+              <li>
+                React: Musical ear-training app, in-progress here:{" "}
+                <Clickable>https://earsnacks.app</Clickable>
+              </li>
+              <li>
+                React: Built audio engine to get higher quality sounds from
+                fewer piano samples using transposition
+              </li>
+              <li>
+                iOS: Written in Objective-C, later rewritten in Swift, used low-level audio
+                API
+              </li>
+              <li>
+                iOS: removed from store in 2018, had 4.6 stars / 1.72K units sold / $5.31K in sales
+              </li>
+           
             </ul>
           </SubSection>
-          <SubSection header={["Piano Punisher", "React, RoR, Stripe", "2018"]}>
+          <SubSection header={["Piano Punisher", "React, RoR, Stripe", "Feb 2018 – Apr 2018"]}>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Browser based MIDI filter using operant conditioning to help you play with more control on your MIDI instrument</li>
+              <li>
+                Notes played outside the given velocity and timing parameters are filtered out, and the silence that occurs when you press a note and don't hear it, feels uncomfortable (is a punishment)
+              </li>
+              <li>
+                Try it out here: <Clickable>https://pianocandy.com/punisher</Clickable>
+              </li>
             </ul>
           </SubSection>
         </Section>
@@ -207,5 +237,7 @@ const Section = ({ title, children }) => (
     <div className="section">{children}</div>
   </>
 );
+
+const Clickable = ({ children }) => <a href={children}>{children}</a>;
 
 export default App;
