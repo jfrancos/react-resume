@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background: black; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
+  background: gray;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section-title {
+  font-variant-caps: small-caps;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: arial;
+  font-size: 10.5pt;
+}
+
+#root {
+  width: 8.5in;
+  height: 11in;
+  background: white;
+}
+
+p, ul {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+/* li {
+  margin-right: -.3rem;
+} */
+
+ul  {
+  padding-left: 1rem;
+}
+
+.right {
+  text-align: right;
+}
+
+hr {
+  border-color: black;
+  border-width: .5px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.trio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space:nowrap;
+}
+
+.trio > div:first-child, .trio > div:last-child {
+  flex: 1;
+}
+
+.trio > div:last-child {
+  text-align: right;
+}
+
+.section {
+  padding: .1rem .4rem .4rem .4rem;
+}
+
+#content {
+  padding: 1rem 2rem;
+}
+
+#header {
+  font-family: times;
+  padding: 1rem 2rem;
+  display: flex;
+  background: rgb(55,128,172);
+  justify-content: space-between;
+  align-items: center;
 }
