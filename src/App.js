@@ -37,7 +37,8 @@ function App() {
         <Section title="Skills">
           <div className="subsection trio">
             <div>
-              React, JavaScript, TypeScript, Emscripten, WebAudio/WebMidi, Linux, Python
+              React, JavaScript, TypeScript, Emscripten, WebAudio/WebMidi,
+              Linux, Python
             </div>
             <div></div>
             <div>Creative, Detail-oriented</div>
@@ -253,7 +254,7 @@ const SubSection = ({ header, boldHeader = true, children }) => (
   <div className="subsection">
     <div className={`trio ${boldHeader && "bold"}`}>
       {header.map((text) => (
-        <div>{text}</div>
+        <div key={text}>{text}</div>
       ))}
     </div>
     {children}
