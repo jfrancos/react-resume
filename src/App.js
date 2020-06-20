@@ -1,28 +1,46 @@
 import React from "react";
 import "./App.css";
 
+//  const section1 =  {
+//     trio: [
+//       "DITR Field Service Engineer",
+//       "MIT",
+//       "Aug 2019 – Present",
+//     ],
+//     points: [
+//       'Provide IT support to astronauts and rocket scientists, their students, and staff',
+//       'Wrote Python script to automate reformatting, and consolidating nmap scans and ldap info, for CrashPlan reports'
+//     ]
+//   }
+
 function App() {
   return (
     <div>
-      <div id="header">
+      <div id="header" className="trio">
         <div style={{ width: "30%" }}>
-          <p>Cambridge, MA</p>
-          <p>https://github.com/jfrancos</p>
-          <p>https://linkedin.com/in/justinfrancos</p>
+          <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
+          <br />
+          <Clickable>https://github.com/jfrancos</Clickable>
         </div>
         <div>
-          <p>Justin Francos</p>
+          <p className="name">Justin Francos</p>
         </div>
         <div style={{ width: "30%" }}>
-          <p className="right">(617) 838-5268</p>
-          <p className="right">justinfrancos@gmail.com</p>
+          justinfrancos@gmail.com
+          <br />
+          Cambridge, MA
+          <br />
+          (617) 838-5268
         </div>
       </div>
       <div id="content">
         <Section title="Skills">
-          <div className="section">
-            Python, JavaScript, React, TypeScript, Emscripten, Linux,
-            WebAudio/WebMidi, Node.js
+          <div className="subsection trio">
+            <div>
+              React, JavaScript, TypeScript, Emscripten, WebAudio/WebMidi, Linux, Python
+            </div>
+            <div></div>
+            <div>Creative, Detail-oriented</div>
           </div>
         </Section>
         <Section title="Employment">
@@ -40,7 +58,7 @@ function App() {
                 students, and staff
               </li>
               <li>
-                Wrote Python script to automate reformatting, and consolidating
+                Wrote Python script to automate: reformatting, and consolidating
                 nmap scans and ldap info, for CrashPlan reports
               </li>
             </ul>
@@ -176,23 +194,35 @@ function App() {
                 fewer piano samples using transposition
               </li>
               <li>
-                iOS: Written in Objective-C, later rewritten in Swift, used low-level audio
-                API
+                iOS: Written in Objective-C, later rewritten in Swift, used
+                low-level audio API
               </li>
               <li>
-                iOS: removed from store in 2018, had 4.6 stars / 1.72K units sold / $5.31K in sales
+                iOS: removed from store in 2018, had 4.6 stars / 1.72K units
+                sold / $5.31K in sales
               </li>
-           
             </ul>
           </SubSection>
-          <SubSection header={["Piano Punisher", "React, RoR, Stripe", "Feb 2018 – Apr 2018"]}>
+          <SubSection
+            header={[
+              "Piano Punisher",
+              "React, RoR, Stripe",
+              "Feb 2018 – Apr 2018",
+            ]}
+          >
             <ul>
-              <li>Browser based MIDI filter using operant conditioning to help you play with more control on your MIDI instrument</li>
               <li>
-                Notes played outside the given velocity and timing parameters are filtered out, and the silence that occurs when you press a note and don't hear it, feels uncomfortable (is a punishment)
+                Browser based MIDI filter using operant conditioning to help you
+                play with more control on your MIDI instrument
               </li>
               <li>
-                Try it out here: <Clickable>https://pianocandy.com/punisher</Clickable>
+                Notes played outside the given velocity and timing parameters
+                are filtered out, and the silence that occurs when you press a
+                note and don't hear it, feels uncomfortable (is a punishment)
+              </li>
+              <li>
+                Try it out here:{" "}
+                <Clickable>https://pianocandy.com/punisher</Clickable>
               </li>
             </ul>
           </SubSection>
@@ -220,7 +250,7 @@ function App() {
 }
 
 const SubSection = ({ header, boldHeader = true, children }) => (
-  <div className="section">
+  <div className="subsection">
     <div className={`trio ${boldHeader && "bold"}`}>
       {header.map((text) => (
         <div>{text}</div>

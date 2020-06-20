@@ -1,6 +1,11 @@
-.App {
-  /* text-align: center; */
-  /* background: black; */
+@font-face {
+  font-family: bodoni;
+  src: url('bauer_bodoni_d_demi_bold-webfont.woff')
+}
+
+.name {
+  font-family: bodoni;
+  font-size: 2.2rem;
 }
 
 html {
@@ -11,7 +16,7 @@ html {
 
 .section-title {
   font-variant-caps: small-caps;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 body {
@@ -30,23 +35,14 @@ p, ul {
   margin-bottom: .25rem;
 }
 
-/* li {
-  margin-right: -.3rem;
-} */
-
 ul  {
-  padding-left: 1rem;
-}
-
-.right {
-  text-align: right;
+  padding-left: 1.2rem;
 }
 
 hr {
   border-color: black;
-  border-width: .5px;
-  margin-top: 4px;
-  margin-bottom: 0;
+  border-width: .4px;
+  margin: 0;
 }
 
 .bold {
@@ -69,18 +65,27 @@ hr {
 }
 
 .section {
-  padding: .1rem .4rem .4rem .4rem;
+  padding: .3rem .8rem
+}
+
+.subsection {
+  padding-bottom: .5rem;
 }
 
 #content {
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
+}
+
+a {
+  color: black;
 }
 
 #header {
   font-family: times;
+  /* font-size: 1rem; */
+  /* padding: 1rem 2rem; */
   padding: 1rem 2rem;
-  display: flex;
   background: rgb(55,128,172);
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  height: 3rem;
 }
