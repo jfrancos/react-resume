@@ -5,7 +5,7 @@
 
 .name {
   font-family: bodoni;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
 }
 
 html {
@@ -73,7 +73,7 @@ hr {
 }
 
 #content {
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
 }
 
 a {
@@ -82,10 +82,8 @@ a {
 
 #header {
   font-family: times;
-  /* font-size: 1rem; */
-  /* padding: 1rem 2rem; */
+  font-size: .9rem;
   padding: 1rem 2rem;
   background: rgb(55,128,172);
   align-items: start;
-  height: 3rem;
 }

@@ -95,10 +95,10 @@ function App() {
             ]}
           >
             <ul>
-              <li>Updated SSRS reports</li>
+              <li>Updated SSRS reports: fonts, colors, formatting, etc.</li>
               <li>
                 Wrote Python script, using lxml and xpath2 libraries, to
-                automate much of the process.
+                automate most of the updates
               </li>
             </ul>
           </SubSection>
@@ -207,19 +207,19 @@ function App() {
           <SubSection
             header={[
               "Piano Punisher",
-              "React, RoR, Stripe",
+              "React, Ruby on Rails, Stripe",
               "Feb 2018 – Apr 2018",
             ]}
           >
             <ul>
               <li>
-                Browser based MIDI filter using operant conditioning to help you
-                play with more control on your MIDI instrument
+                Browser based MIDI filter helps improve musicians’ technical
+                skills
               </li>
               <li>
                 Notes played outside the given velocity and timing parameters
-                are filtered out, and the silence that occurs when you press a
-                note and don't hear it, feels uncomfortable (is a punishment)
+                are filtered out, and the silence that occurs when one presses a
+                note and it doesn’t sound, feels uncomfortable (is a punishment)
               </li>
               <li>
                 Try it out here:{" "}
