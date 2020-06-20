@@ -20,6 +20,8 @@ function App() {
         <div style={{ width: "30%" }}>
           <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
           <br />
+          <Clickable>https://github.com/jfrancos/resume</Clickable>
+          <br />
           <Clickable>https://github.com/jfrancos</Clickable>
         </div>
         <div>
@@ -48,7 +50,7 @@ function App() {
           <SubSection
             boldHeader
             header={[
-              "DITR Field Service Engineer",
+              "DITR Field Service Engineer @ AeroAstro",
               "MIT",
               "Aug 2019 – Present",
             ]}
@@ -128,9 +130,12 @@ function App() {
             <ul>
               <li>Network, Linux, Windows administrator</li>
               <li>
-                Maintained and repaired smartboards, printers, 150 computers
+                Maintained and repaired SMART Boards, printers, 150 computers
               </li>
-              <li>Helpdesk and data recovery</li>
+              <li>
+                Provided emotionally sensitive technical support to overworked
+                teachers
+              </li>
               <li>
                 Maintained library circulation software and legacy fundraising
                 software
@@ -138,7 +143,8 @@ function App() {
             </ul>
           </SubSection>
         </Section>
-        <Section title="Projects">
+        <Section title="
+        Solo side-projects">
           <SubSection
             header={[
               "search-children",
@@ -189,6 +195,9 @@ function App() {
               <li>
                 React: Musical ear-training app, in-progress here:{" "}
                 <Clickable>https://earsnacks.app</Clickable>
+              </li>
+              <li>
+                React: Designed an SVG component that symbolically describes four different settings parameters
               </li>
               <li>
                 React: Built audio engine to get higher quality sounds from
