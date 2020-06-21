@@ -1,6 +1,6 @@
 @font-face {
   font-family: bodoni;
-  src: url('bauer_bodoni_d_demi_bold-webfont.woff')
+  src: url("bauer_bodoni_d_demi_bold-webfont.woff");
 }
 
 .name {
@@ -30,19 +30,22 @@ body {
   background: white;
 }
 
-p, ul {
-  margin-top: .25rem;
-  margin-bottom: .25rem;
+p,
+ul {
+  /* margin-top: .25rem;
+  margin-bottom: .25rem; */
+  margin-top: 0.05rem;
+  margin-bottom: 0;
 }
 
-ul  {
+ul {
   padding-left: 1.2rem;
 }
 
 hr {
   border-color: black;
-  border-width: .4px;
-  margin: 0;
+  border-width: 0.4px;
+  margin: 0.1rem;
 }
 
 .bold {
@@ -53,10 +56,11 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
-.trio > div:first-child, .trio > div:last-child {
+.trio > div:first-child,
+.trio > div:last-child {
   flex: 1;
 }
 
@@ -65,11 +69,12 @@ hr {
 }
 
 .section {
-  padding: .3rem .8rem
+  /* padding: .3rem .8rem */
+  padding: 0 0.8rem;
 }
 
 .subsection {
-  padding-bottom: .5rem;
+  padding-bottom: 0.6rem;
 }
 
 #content {
@@ -81,9 +86,9 @@ a {
 }
 
 #header {
-  font-family: times;
-  font-size: .9rem;
+  /* font-family: times; */
+  font-size: 0.75rem;
   padding: 1rem 2rem;
-  background: rgb(55,128,172);
+  background: rgb(55, 128, 172);
   align-items: start;
 }
