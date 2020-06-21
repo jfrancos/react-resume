@@ -39,8 +39,8 @@ function App() {
         <Section title="Skills">
           <div className="subsection trio">
             <div>
-              React +hooks, JavaScript, TypeScript, Emscripten, WebAudio/WebMidi,
-              Python, Linux
+              React +hooks, JavaScript, TypeScript, Emscripten,
+              WebAudio/WebMidi, Python, Linux
             </div>
             <div></div>
             <div></div>
@@ -116,7 +116,7 @@ function App() {
           </SubSection>
           <SubSection
             header={[
-                'Freelance Software Engineer',
+              "Freelance Software Engineer",
               "Upwork.com",
               "May 2017 – July 2017",
             ]}
@@ -131,10 +131,12 @@ function App() {
                 file the user could download
               </li>
               <li>
-              <a href="https://www.upwork.com/o/profiles/users/~0178bd0f2e45bd432f/">Client review excerpts:</a> “Highly skilled in both MIDI and
-                JavaScript. Excellent adherence to deadlines and great to work
-                with” “Completed the job on time and with excellent
-                communication throughout”
+                <a href="https://www.upwork.com/o/profiles/users/~0178bd0f2e45bd432f/">
+                  Client review excerpts:
+                </a>{" "}
+                “Highly skilled in both MIDI and JavaScript. Excellent adherence
+                to deadlines and great to work with” “Completed the job on time
+                and with excellent communication throughout”
               </li>
             </ul>
           </SubSection>
@@ -203,8 +205,10 @@ function App() {
                 overrides decodeAudio to decode ogg in any browser
               </li>
               <li>
-                <a href="https://github.com/jfrancos/oggmented/blob/d2bfabcaae75668a15374f47e4dc3d88684cc021/src/em/pre.js#L38">Breaks out of the decode loop periodically</a>, to keep the event
-                loop going without the need for WebWorkers
+                <a href="https://github.com/jfrancos/oggmented/blob/d2bfabcaae75668a15374f47e4dc3d88684cc021/src/em/pre.js#L38">
+                  Breaks out of the decode loop periodically
+                </a>
+                , to keep the event loop going without the need for WebWorkers
               </li>
             </ul>
           </SubSection>
