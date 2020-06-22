@@ -3,6 +3,23 @@
   src: url("bauer_bodoni_d_demi_bold-webfont.woff");
 }
 
+.print {
+  display: none;
+}
+
+.screen {
+  display: initial;
+}
+
+@media print {
+  .print {
+    display: initial;
+  }
+  .screen {
+    display: none;
+  }
+}
+
 .name {
   font-family: bodoni;
   font-size: 2.1rem;

@@ -18,11 +18,20 @@ function App() {
     <div>
       <div id="header" className="trio">
         <div>
-          <Clickable>https://github.com/jfrancos/react-resume</Clickable>
-          <br />
-          <Clickable>https://github.com/jfrancos</Clickable>
-          <br />
-          <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
+          <div className="print">
+            <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
+            <br />
+            <Clickable>https://github.com/jfrancos</Clickable>
+            <br />
+            <Clickable>https://francosjust.in</Clickable>
+          </div>
+          <div className="screen">
+            <Clickable>https://github.com/jfrancos/react-resume</Clickable>
+            <br />
+            <Clickable>https://github.com/jfrancos</Clickable>
+            <br />
+            <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
+          </div>
         </div>
         <div>
           <p className="name">Justin Francos</p>
