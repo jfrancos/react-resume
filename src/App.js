@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <div id="header" className="trio">
-        <div style={{ width: "30%" }}>
+        <div>
           <Clickable>https://github.com/jfrancos/react-resume</Clickable>
           <br />
           <Clickable>https://github.com/jfrancos</Clickable>
@@ -27,7 +27,7 @@ function App() {
         <div>
           <p className="name">Justin Francos</p>
         </div>
-        <div style={{ width: "30%" }}>
+        <div>
           justinfrancos@gmail.com
           <br />
           Cambridge, MA
