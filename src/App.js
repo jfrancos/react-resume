@@ -16,8 +16,8 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <div id="header" className="trio">
-        <div>
+      <div id="header">
+        <div className="header0">
           <div className="print">
             <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
             <br />
@@ -33,10 +33,10 @@ function App() {
             <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
           </div>
         </div>
-        <div>
+        <div className="header1">
           <p className="name">Justin Francos</p>
         </div>
-        <div>
+        <div className="header2">
           justinfrancos@gmail.com
           <br />
           Cambridge, MA
@@ -46,7 +46,7 @@ function App() {
       </div>
       <div id="content">
         <Section title="Skills">
-          <div className="subsection trio">
+          <div className="subsection">
             <div>
               React +hooks, JavaScript, TypeScript, Emscripten,
               WebAudio/WebMidi, Python, Linux
@@ -314,8 +314,8 @@ function App() {
 const SubSection = ({ header, boldHeader = true, children }) => (
   <div className="subsection">
     <div className={`trio ${boldHeader && "bold"}`}>
-      {header.map((text) => (
-        <div key={text}>{text}</div>
+      {header.map((text, i) => (
+        <div key={text} className={`column${i}`}>{text}</div>
       ))}
     </div>
     {children}
