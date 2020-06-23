@@ -311,9 +311,9 @@ function App() {
   );
 }
 
-const SubSection = ({ header, boldHeader = true, children }) => (
+const SubSection = ({ header, children }) => (
   <div className="subsection">
-    <div className={`trio ${boldHeader && "bold"}`}>
+    <div className="trio">
       {header.map((text, i) => (
         <div key={text} className={`column${i}`}>{text}</div>
       ))}

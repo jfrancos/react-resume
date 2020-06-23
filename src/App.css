@@ -70,12 +70,8 @@ hr {
   margin: 0.1rem;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 .trio {
-  /* font-weight: 700; */
+  font-weight: 700;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "column0 column1 column2";
