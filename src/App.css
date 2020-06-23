@@ -124,6 +124,7 @@ hr {
 
 @media (max-width: 480px) {
   #header {
+    padding: 2rem;
     grid-template-columns: auto;
     grid-template-areas:
       "column1"
