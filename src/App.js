@@ -28,13 +28,13 @@ function App() {
           <div className="screen">
             <Clickable>https://github.com/jfrancos/react-resume</Clickable>
             <br />
-            <Clickable>https://github.com/jfrancos</Clickable>
-            <br />
             <Clickable>https://linkedin.com/in/justinfrancos</Clickable>
+            <br />
+            <Clickable>https://github.com/jfrancos</Clickable>
           </div>
         </div>
         <div className="header1">
-          <p className="name">Justin Francos</p>
+          <div className="name">Justin Francos</div>
         </div>
         <div className="header2">
           justinfrancos@gmail.com
@@ -315,7 +315,9 @@ const SubSection = ({ header, children }) => (
   <div className="subsection">
     <div className="trio">
       {header.map((text, i) => (
-        <div key={text} className={`column${i}`}>{text}</div>
+        <div key={text} className={`column${i}`}>
+          {text}
+        </div>
       ))}
     </div>
     {children}

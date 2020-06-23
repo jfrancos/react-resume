@@ -82,6 +82,7 @@ hr {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "column0 column1 column2";
+  gap: 1rem;
 }
 
 .column0,
@@ -116,11 +117,8 @@ hr {
       "column0 column2"
       "column1 column2";
   }
-  .header0,
-  .header1,
-  .header2 {
-    margin-bottom: 0.25rem;
-    margin-top: 0.25rem;
+  .name {
+    line-height: 1;
   }
 }
 
@@ -136,7 +134,6 @@ hr {
   .header1,
   .header2 {
     text-align: center;
-    margin-bottom: 1rem;
   }
   #content {
     padding-right: 1rem;
