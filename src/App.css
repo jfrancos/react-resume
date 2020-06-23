@@ -1,6 +1,7 @@
 @font-face {
   font-family: bodoni;
   src: url("bauer_bodoni_d_demi_bold-webfont.woff");
+  /* font-display: swap; */
 }
 
 .print {
@@ -20,7 +21,8 @@
   }
 }
 
-.name {
+h1 {
+  margin: 0;
   font-family: bodoni;
   font-size: 2.1rem;
 }
@@ -117,7 +119,7 @@ hr {
       "column0 column2"
       "column1 column2";
   }
-  .name {
+  h1 {
     line-height: 1;
   }
 }

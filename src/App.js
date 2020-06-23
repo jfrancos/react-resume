@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="header1">
-          <div className="name">Justin Francos</div>
+          <h1>Justin Francos</h1>
         </div>
         <div className="header2">
           justinfrancos@gmail.com
