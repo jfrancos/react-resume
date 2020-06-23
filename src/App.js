@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import {
+  isMobile
+} from "react-device-detect";
 
 //  const section1 =  {
 //     trio: [
@@ -41,7 +44,8 @@ function App() {
           <br />
           Cambridge, MA
           <br />
-          <a href="tel:6178385268">(617) 838-5268</a>
+          {isMobile ? <a href="tel:6178385268">(617) 838-5268</a> : '(617) 838-5268'}
+          
         </div>
       </div>
       <div id="content">
