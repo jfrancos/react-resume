@@ -26,6 +26,7 @@
 }
 
 html {
+  -webkit-text-size-adjust: 100%;
   background: gray;
   display: flex;
   justify-content: center;
@@ -74,6 +75,7 @@ hr {
 }
 
 .trio {
+  /* font-weight: 700; */
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "column0 column1 column2";
