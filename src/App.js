@@ -37,11 +37,11 @@ function App() {
           <h1>Justin Francos</h1>
         </div>
         <div className="header2">
-          justinfrancos@gmail.com
+          <a href="mailto:justinfrancos@gmail.com">justinfrancos@gmail.com</a>
           <br />
           Cambridge, MA
           <br />
-          (617) 838-5268
+          <a href="tel:6178385268">(617) 838-5268</a>
         </div>
       </div>
       <div id="content">
