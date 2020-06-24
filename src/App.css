@@ -21,6 +21,12 @@
   }
 }
 
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   /* letter-spacing: -.1rem; */
   margin: 0;
@@ -110,9 +116,6 @@ hr {
     grid-template-areas:
       "column1 column1"
       "column0 column2";
-  }
-  .header1 {
-    text-align: center;
   }
   .trio {
     grid-template-columns: auto auto;
