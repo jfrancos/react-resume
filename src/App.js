@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  isMobile
-} from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 //  const section1 =  {
 //     trio: [
@@ -44,8 +42,11 @@ function App() {
           <br />
           Cambridge, MA
           <br />
-          {isMobile ? <a href="tel:6178385268">(617) 838-5268</a> : '(617) 838-5268'}
-          
+          {isMobile ? (
+            <a href="tel:6178385268">(617) 838-5268</a>
+          ) : (
+            "(617) 838-5268"
+          )}
         </div>
       </div>
       <div id="content">
@@ -162,12 +163,10 @@ function App() {
                 Maintained and repaired SMART Boards, printers, 150 computers
               </li>
               <li>
-                Provided emotionally sensitive IT support to overworked teachers
+                Provided emotionally sensitive help desk support to overworked
+                teachers
               </li>
-              <li>
-                Maintained library circulation software and legacy fundraising
-                software
-              </li>
+              <li>Maintained website, performed data recovery</li>
             </ul>
           </SubSection>
         </Section>
