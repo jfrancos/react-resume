@@ -137,7 +137,7 @@ function App() {
           >
             <ul>
               <li>
-                Created a crude browser-based MIDI sequencer using WebMidi,
+                Created a browser-based MIDI recorder/player using WebMidi,
                 WebAudio, and jQuery
               </li>
               <li>
