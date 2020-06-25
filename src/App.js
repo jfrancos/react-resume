@@ -97,8 +97,8 @@ function App() {
                 sale of most of their 18.0.0.0/8
               </li>
               <li>
-                Helped users decide on dynamic vs persistent IPs, public vs
-                private IPs
+                Helped faculty/staff/students decide on dynamic vs persistent
+                IPs, private vs public IPs
               </li>
               <li>
                 Wrote Python script to automate nmap scans and MAC/vendor
@@ -123,8 +123,8 @@ function App() {
             <ul>
               <li>Updated SSRS reports: fonts, colors, formatting, etc.</li>
               <li>
-                Wrote Python script, using lxml and xpath2 libraries, to
-                automate most of the updates
+                Wrote Python script, using lxml and xpath2 libraries to automate
+                most of the updates
               </li>
             </ul>
           </SubSection>
@@ -193,8 +193,8 @@ function App() {
                 then searches those strings for the specified text
               </li>
               <li>
-                Companion component Pierce allows non-children text (generated
-                by the component) to be searched and marked
+                Companion component Pierce allows embedded text not derived from
+                children to be searched and marked
               </li>
             </ul>
           </SubSection>
@@ -219,8 +219,8 @@ function App() {
               <li>
                 <a href="https://github.com/jfrancos/oggmented/blob/d2bfabcaae75668a15374f47e4dc3d88684cc021/src/em/pre.js#L38">
                   Breaks out of the decode loop periodically
-                </a>
-                , to keep the event loop going without the need for WebWorkers
+                </a>{" "}
+                to keep the event loop going without needing WebWorkers
               </li>
             </ul>
           </SubSection>
@@ -233,16 +233,12 @@ function App() {
           >
             <ul>
               <li>
-                Automates and gamifies an ear-training technique that would
-                otherwise require hours of preparation
+                Automates and gamifies a musical ear-training technique that
+                would otherwise require hours of preparation
               </li>
               <li>
                 SPA: React, WebAudio
                 <ul>
-                  <li>
-                    Musical ear-training app, in-progress at:{" "}
-                    <Clickable>https://earsnacks.app</Clickable>
-                  </li>
                   <li>
                     Designed an SVG component that combines and symbolically
                     describes the four main configuration settings
@@ -250,6 +246,9 @@ function App() {
                   <li>
                     Built audio engine to get higher quality sounds from fewer
                     piano samples using transposition
+                  </li>
+                  <li>
+                    In-progress at: <Clickable>https://earsnacks.app</Clickable>
                   </li>
                 </ul>
               </li>
@@ -295,7 +294,7 @@ function App() {
 
         <Section title="Education">
           <SubSection
-            header={["State University of New York at Potsdam", "", "2002"]}
+            header={["Bachelor of Arts", "State University of New York at Potsdam",  "2002"]}
           >
             <ul>
               <li>
