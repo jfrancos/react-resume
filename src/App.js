@@ -54,7 +54,7 @@ function App() {
           <div className="subsection">
             <div>
               React +hooks, JavaScript, TypeScript, Emscripten,
-              WebAudio/WebMidi, Python, Linux
+              WebAudio/WebMidi, Python, Linux, Web Scraping
             </div>
             <div></div>
             <div></div>
