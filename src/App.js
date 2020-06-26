@@ -115,7 +115,7 @@ function App() {
           </SubSection>
           <SubSection
             header={[
-              "Technical Consultant",
+              "Freelance Software Engineer",
               "Calero Software / ComView",
               "Oct 2017 – Jan 2018",
             ]}
