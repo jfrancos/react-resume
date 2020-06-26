@@ -54,7 +54,7 @@ function App() {
           <div className="subsection">
             <div>
               React +hooks, JavaScript, TypeScript, Emscripten,
-              WebAudio/WebMidi, Python, Linux, Web Scraping
+              WebAudio/WebMidi, Python, Bash/Linux, Web Scraping
             </div>
             <div></div>
             <div></div>
@@ -227,7 +227,7 @@ function App() {
           <SubSection
             header={[
               "Ear Sharpener",
-              "SPA (2019-present), iOS (2009-2018)",
+              "SPA (2019 – present), iOS (2009 – 2018)",
               "2009 – present",
             ]}
           >
