@@ -53,8 +53,8 @@ function App() {
         <Section title="Skills">
           <div className="subsection">
             <div>
-              React +hooks, JavaScript, TypeScript, Emscripten,
-              WebAudio/WebMidi, Python, Bash/Linux, Web Scraping
+              React, JavaScript, TypeScript, MongoDB, Emscripten,
+              WebAudio/WebMidi, Python, Bash/Linux, C, Web Scraping
             </div>
             <div></div>
             <div></div>
@@ -209,8 +209,8 @@ function App() {
           >
             <ul>
               <li>
-                Augments AudioContext: WebKit's decodeAudioData doesn't work
-                with ogg vorbis, Blink's ogg decoding is buggy
+                Augments AudioContext: WebKit’s decodeAudioData doesn’t work
+                with ogg vorbis, Blink’s ogg decoding is buggy
               </li>
               <li>
                 AudioContext subclass / Emscripten transpiling of libvorbis,
@@ -270,7 +270,7 @@ function App() {
           <SubSection
             header={[
               "Piano Punisher",
-              "React, TypeScript, Ruby on Rails, Stripe",
+              "React, TypeScript, Ruby on Rails, Stripe, PostgreSQL",
               "Feb 2018 – Apr 2018",
             ]}
           >
