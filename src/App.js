@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
+// import 'react-bulma-components/dist/react-bulma-components.min.css';
+// import { Button } from 'react-bulma-components';
 
 //  const section1 =  {
 //     trio: [
@@ -155,6 +157,28 @@ function App() {
             </ul>
           </SubSection>
           <SubSection
+            header={[
+              "Freelance Software Engineer",
+              "The Globe Institute",
+              "Oct 2016 – Jan 2017",
+            ]}
+          >
+            <ul>
+              <li>
+                For each class, instructor Ryan Moore drew diagrams consisting
+                of equilateral polygons inscribed in a circle
+              </li>
+              <li>
+                These diagrams varied but always conformed to a set of
+                constraints, and took multiple hours to create by hand
+              </li>
+              <li>
+                Automated the creation of these with a simple SPA, rendering to
+                SVG/PDF and reducing his prep work to minutes
+              </li>
+            </ul>
+          </SubSection>
+          <SubSection
             header={["IT Director", "Epiphany School", "Sep 2006 – Jun 2016"]}
           >
             <ul>
@@ -294,7 +318,11 @@ function App() {
 
         <Section title="Education">
           <SubSection
-            header={["Bachelor of Arts", "State University of New York at Potsdam",  "2002"]}
+            header={[
+              "Bachelor of Arts",
+              "State University of New York at Potsdam",
+              "2002",
+            ]}
           >
             <ul>
               <li>
