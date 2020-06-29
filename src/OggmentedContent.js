@@ -254,7 +254,7 @@ const ReaderDemo = () => {
       <hr />
       <br />
       <p>
-        Oggmented AudioContext is a library that decodes vorbis using its own
+        <a href="https://github.com/jfrancos/oggmented">Oggmented AudioContext</a> is a library that decodes vorbis using its own
         JavaScript and Wasm, transpiled from Xiph's libvorbis C libraries,
         rather than using the browser's built in audio decoding support.
       </p>
