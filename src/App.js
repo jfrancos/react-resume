@@ -251,7 +251,7 @@ function App() {
                 </li>
               </ul>
               <Link style={{ textDecoration: "none" }} to="oggmented">
-                <button className="button">Tell me more</button>
+                <button className="button">Tell me more about oggmented</button>
               </Link>
             </SubSection>
             <SubSection
