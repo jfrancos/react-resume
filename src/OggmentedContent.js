@@ -72,7 +72,7 @@ const OggmentedContent = () => {
         </a>{" "}
         is the engine for Brave, Opera, and Chrome.{" "}
         <a href="https://en.wikipedia.org/wiki/WebKit">WebKit</a> is the engine
-        for Safari and all iOS browsers (e.g. Chrome on your iPhone uses Webkit,
+        for Safari and all iOS browsers (e.g. Chrome on an iPhone uses Webkit,
         not Blink).{" "}
         <a href="https://en.wikipedia.org/wiki/Gecko_(software)">Gecko</a> is
         the engine for Firefox.
@@ -210,7 +210,7 @@ const LoopDemo = () => {
         If you look in your browser's JavaScript console, you'll see the
         Float32Arrays for both buffers. The Oggmented AudioContext's buffer has
         33075 samples, which is a reasonable number of samples to see for 0.75s
-        of 44100 Hz audio. Whereas the native AudioContext has{" "}
+        of 44100 Hz audio. The native AudioContext however, has{" "}
         {nativeTriangleBuffer && nativeTriangleBuffer.length} samples.
       </p>
     </>
