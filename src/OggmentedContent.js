@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faStop } from "@fortawesome/free-solid-svg-icons";
 import AudioFileLooper from "./AudioFileLooper";
+
 const [select, loading, ready, playing] = Array.from({ length: 4 }, Symbol);
 
 const OggmentedContent = () => {
   const { oggmentedContext } = useContext(AudioContextContext);
-
   const [browser, setBrowser] = useState();
 
   useEffect(() => {
@@ -41,7 +41,8 @@ const OggmentedContent = () => {
           looped. For example with the file produced by{" "}
           <code>
             sox -nr 44100 triangle.ogg synth .75 triangle 440 gain -20
-          </code>:
+          </code>
+          :
         </p>
 
         <LoopDemo />
@@ -79,9 +80,14 @@ const OggmentedContent = () => {
       <br />
       <div className="content">{content[browser]}</div>
       <ReaderDemo />
+      <br />
+      <a href="https://github.com/jfrancos/react-resume/blob/master/src/OggmentedContent.js">
+        Source for this page
+      </a>
     </>
   );
 };
+
 const useDecodeAudioData = (filename, audioContext) => {
   const [audioBuffer, setAudioBuffer] = useState();
   useEffect(() => {
@@ -94,6 +100,7 @@ const useDecodeAudioData = (filename, audioContext) => {
 
   return audioBuffer;
 };
+
 const useReader = (setReaderState) => {
   const [readerBuffer, setReaderBuffer] = useState();
   const { oggmentedContext } = useContext(AudioContextContext);
@@ -141,63 +148,72 @@ const LoopDemo = () => {
 
   useEffect(() => {
     if (nativeTriangleBuffer) {
-      console.log("native AudioContext:", nativeTriangleBuffer.getChannelData(0));
+      console.log(
+        "native AudioContext:",
+        nativeTriangleBuffer.getChannelData(0)
+      );
     }
   }, [nativeTriangleBuffer]);
 
   useEffect(() => {
     if (oggmentedTriangleBuffer) {
-      console.log("oggmented AudioContext", oggmentedTriangleBuffer.getChannelData(0));
+      console.log(
+        "oggmented AudioContext",
+        oggmentedTriangleBuffer.getChannelData(0)
+      );
     }
   }, [oggmentedTriangleBuffer]);
 
   return (
     <>
-    <div
-      style={{
-        display: "flex",
-        width: "100%",
-        justifyContent: "space-evenly",
-        flexWrap: "wrap",
-      }}
-    >
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          width: "100%",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
         }}
       >
-        <AudioFileLooper
-          audioCtx={nativeContext}
-          running={runningBuffer === nativeTriangleBuffer}
-          onClick={togglePlayer(nativeTriangleBuffer)}
-          buffer={nativeTriangleBuffer}
-        />
-        <p>Looped using native AudioContext</p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <AudioFileLooper
+            audioCtx={nativeContext}
+            running={runningBuffer === nativeTriangleBuffer}
+            onClick={togglePlayer(nativeTriangleBuffer)}
+            buffer={nativeTriangleBuffer}
+          />
+          <p>Looped using native AudioContext</p>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <AudioFileLooper
+            audioCtx={oggmentedContext}
+            running={runningBuffer === oggmentedTriangleBuffer}
+            onClick={togglePlayer(oggmentedTriangleBuffer)}
+            buffer={oggmentedTriangleBuffer}
+          />
+          <p>Looped using OggmentedAudioContext</p>
+        </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <AudioFileLooper
-          audioCtx={oggmentedContext}
-          running={runningBuffer === oggmentedTriangleBuffer}
-          onClick={togglePlayer(oggmentedTriangleBuffer)}
-          buffer={oggmentedTriangleBuffer}
-        />
-        <p>Looped using OggmentedAudioContext</p>
-      </div>
-      
-    </div>
-    <br/> 
-    <p>
-    If you look in your browser's JavaScript console, you'll see the Float32Arrays for both buffers.  The Oggmented AudioContext's buffer has 33075 samples, which is a reasonable number of samples to see for 0.75s of 44100 Hz audio.  Whereas the native AudioContext has {nativeTriangleBuffer && nativeTriangleBuffer.length} samples.
-  </p>
-  </>
+      <br />
+      <p>
+        If you look in your browser's JavaScript console, you'll see the
+        Float32Arrays for both buffers. The Oggmented AudioContext's buffer has
+        33075 samples, which is a reasonable number of samples to see for 0.75s
+        of 44100 Hz audio. Whereas the native AudioContext has{" "}
+        {nativeTriangleBuffer && nativeTriangleBuffer.length} samples.
+      </p>
+    </>
   );
 };
 
@@ -233,13 +249,16 @@ const ReaderDemo = () => {
     }
   };
   return (
-    <><br/>
-        <hr/>
-        <br/>
-    <p>
-      Oggmented AudioContext is a library that decodes vorbis using its own JavaScript and Wasm, transpiled from Xiph's libvorbis C libraries, rather than using the browser's built in audio decoding support.
-    </p>
-    
+    <>
+      <br />
+      <hr />
+      <br />
+      <p>
+        Oggmented AudioContext is a library that decodes vorbis using its own
+        JavaScript and Wasm, transpiled from Xiph's libvorbis C libraries,
+        rather than using the browser's built in audio decoding support.
+      </p>
+
       <button
         className="button"
         style={{ height: "4rem", margin: "1rem auto" }}
