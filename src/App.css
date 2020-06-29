@@ -39,7 +39,24 @@ html {
   background: gray;
   display: flex;
   justify-content: center;
-  align-items: center;  /* not doing its thing? */
+  align-items: center; /* not doing its thing? */
+}
+
+.button {
+  border-radius: 0.25rem;
+  background: rgb(62, 135, 106);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-top: 0.2rem;
+  margin: .25rem auto;
+  display:block;
+}
+
+.button:hover {
+  background: rgb(35, 109, 82);
 }
 
 .section-title {
@@ -48,6 +65,8 @@ html {
 }
 
 body {
+  /* color: black;
+  line-height: 1.2; */
   font-family: arial;
   font-size: 10.5pt;
   max-width: 8.5in;
