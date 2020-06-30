@@ -2,8 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import AudioContextContext from "./AudioContextContext";
 import ClipLoader from "react-spinners/ClipLoader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { faStop } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faStop } from "@fortawesome/free-solid-svg-icons";
 import AudioFileLooper from "./AudioFileLooper";
 
 const [select, loading, ready, playing] = Array.from({ length: 4 }, Symbol);
@@ -21,7 +20,7 @@ const OggmentedContent = () => {
       <>
         <p>
           <b>
-            We seem to be running inside a browser that doesn't natively support
+            We seem to be running inside a browser that doesn’t natively support
             ogg vorbis. This is expected for Safari, and all the iOS browsers.
           </b>
         </p>
@@ -31,13 +30,13 @@ const OggmentedContent = () => {
       <>
         <p>
           <b>
-            Oggmented has detected that it's running in a browser with buggy ogg
+            Oggmented has detected that it’s running in a browser with buggy ogg
             vorbis support. This is expected for Browsers using the Blink
             engine: Brave, Opera, Chrome, etc.{" "}
           </b>{" "}
           Blink uses ffmpeg to decode vorbis, which has a bug specific to vorbis
           where it adds a few extra samples at the end, resulting in a popping
-          sound if you were to loop some audio that's meant to sound smooth when
+          sound if you were to loop some audio that’s meant to sound smooth when
           looped. For example with the file produced by{" "}
           <code>
             sox -nr 44100 triangle.ogg synth .75 triangle 440 gain -20
@@ -52,7 +51,7 @@ const OggmentedContent = () => {
       <>
         <p>
           <b>
-            Oggmented has detected that it's running in a browser that has full
+            Oggmented has detected that it’s running in a browser that has full
             ogg vorbis support. This is expected for Firefox.
           </b>{" "}
           Check out this page in some different browsers, for some different
@@ -207,8 +206,8 @@ const LoopDemo = () => {
       </div>
       <br />
       <p>
-        If you look in your browser's JavaScript console, you'll see the
-        Float32Arrays for both buffers. The Oggmented AudioContext's buffer has
+        If you look in your browser’s JavaScript console, you’ll see the
+        Float32Arrays for both buffers. The Oggmented AudioContext’s buffer has
         33075 samples, which is a reasonable number of samples to see for 0.75s
         of 44100 Hz audio. The native AudioContext however, has{" "}
         {nativeTriangleBuffer && nativeTriangleBuffer.length} samples.
@@ -254,9 +253,12 @@ const ReaderDemo = () => {
       <hr />
       <br />
       <p>
-        <a href="https://github.com/jfrancos/oggmented">Oggmented AudioContext</a> is a library that decodes vorbis using its own
-        JavaScript and Wasm, transpiled from Xiph's libvorbis C libraries,
-        rather than using the browser's built in audio decoding support.
+        <a href="https://github.com/jfrancos/oggmented">
+          Oggmented AudioContext
+        </a>{" "}
+        is a library that decodes vorbis using its own JavaScript and Wasm,
+        transpiled from Xiph’s libvorbis C libraries, rather than using the
+        browser’s built in audio decoding support.
       </p>
 
       <button
@@ -281,8 +283,8 @@ const ReaderDemo = () => {
         )}
       </button>
       <p>
-        If you don't happen to have any vorbis files lying around but you'd like
-        to try this demonstration, here's one you can download:{" "}
+        If you don’t happen to have any vorbis files lying around but you’d like
+        to try this demonstration, here’s one you can download:{" "}
         <a href="ValsaDoCorpo.ogg">Só Sol – Valsa Do Corpo</a>. (More Só Sol can
         be found at their <a href="https://sosol.bandcamp.com">Bandcamp page</a>
         )
