@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
-import OggmentedContent from "./OggmentedContent"
+import OggmentedContent from "./OggmentedContent";
 
 //  const section1 =  {
 //     trio: [
@@ -52,9 +52,10 @@ function App() {
         </div>
       </div>
       <div id="content">
-
-      <Route path="/oggmented"><OggmentedContent /></Route>
-      <Route exact path="/">
+        <Route path="/oggmented">
+          <OggmentedContent />
+        </Route>
+        <Route exact path="/">
           <Section title="Skills">
             <div className="subsection">
               <div>
@@ -250,9 +251,15 @@ function App() {
                   to keep the event loop going without needing WebWorkers
                 </li>
               </ul>
-              <Link style={{ textDecoration: "none" }} to="oggmented">
-                <button className="button">Tell me more about oggmented</button>
-              </Link>
+              <div style={{ display: "flex" }}>
+                <Link
+                  className="button"
+                  style={{ textDecoration: "none" }}
+                  to="oggmented"
+                >
+                  Tell me more about oggmented
+                </Link>
+              </div>
             </SubSection>
             <SubSection
               header={[
@@ -344,13 +351,11 @@ function App() {
               </ul>
             </SubSection>
           </Section>
-      </Route>
+        </Route>
       </div>
     </div>
   );
 }
-
-
 
 const SubSection = ({ header, children }) => (
   <div className="subsection">
