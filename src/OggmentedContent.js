@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faStop } from "@fortawesome/free-solid-svg-icons";
 import AudioFileLooper from "./AudioFileLooper";
 
+// ReaderDemo states
 const [select, loading, ready, playing] = Array.from({ length: 4 }, Symbol);
 
 const OggmentedContent = () => {
@@ -17,14 +18,12 @@ const OggmentedContent = () => {
 
   const content = {
     webkit: (
-      <>
-        <p>
-          <b>
-            We seem to be running inside a browser that doesn’t natively support
-            ogg vorbis. This is expected for Safari, and all the iOS browsers.
-          </b>
-        </p>
-      </>
+      <p>
+        <b>
+          We seem to be running inside a browser that doesn’t natively support
+          ogg vorbis. This is expected for Safari, and all the iOS browsers.
+        </b>
+      </p>
     ),
     blink: (
       <>
@@ -43,21 +42,18 @@ const OggmentedContent = () => {
           </code>
           :
         </p>
-
         <LoopDemo />
       </>
     ),
     gecko: (
-      <>
-        <p>
-          <b>
-            Oggmented has detected that it’s running in a browser that has full
-            ogg vorbis support. This is expected for Firefox.
-          </b>{" "}
-          Check out this page in some different browsers, for some different
-          results.
-        </p>
-      </>
+      <p>
+        <b>
+          Oggmented has detected that it’s running in a browser that has full
+          ogg vorbis support. This is expected for Firefox.
+        </b>{" "}
+        Check out this page in some different browsers, for some different
+        results.
+      </p>
     ),
   };
 
