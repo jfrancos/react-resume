@@ -58,9 +58,9 @@ function App() {
         <Route exact path="/">
           <Section title="Skills">
             <div className="subsection">
-              <div>
-                React, JavaScript, TypeScript, MongoDB, Emscripten,
-                WebAudio/WebMidi, Python, Bash/Linux, C, Web Scraping
+              <div style={{marginRight: "-1rem"}}>
+                React, JavaScript, TypeScript, MongoDB, Wasm,
+                WebAudio/WebMidi, Python, Bash/Linux, C, Web Scraping, Node.js
               </div>
               <div></div>
               <div></div>
