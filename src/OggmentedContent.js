@@ -16,13 +16,18 @@ const OggmentedContent = () => {
     oggmentedContext.nativeVorbisLevel().then((level) => setBrowser(level));
   }, [oggmentedContext]);
 
+  const differentBrowsersNote = `The content of this page is different depending on which engine is present.  Check out the Blink version (Brave/Opera/Chrome)  for an interesting demo
+  of its buggy vorbis decoding implementation.`;
+
   const content = {
     webkit: (
       <p>
         <b>
           We seem to be running inside a browser that doesn’t natively support
-          ogg vorbis. This is expected for Safari, and all the iOS browsers.
+          ogg vorbis. This is expected for Safari, and all the iOS browsers.{" "}
         </b>
+        {differentBrowsersNote}
+
       </p>
     ),
     blink: (
@@ -51,8 +56,7 @@ const OggmentedContent = () => {
           Oggmented has detected that it’s running in a browser that has full
           ogg vorbis support. This is expected for Firefox.
         </b>{" "}
-        Check out this page in some different browsers, for some different
-        results.
+        {differentBrowsersNote}
       </p>
     ),
   };
