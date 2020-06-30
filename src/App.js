@@ -58,9 +58,9 @@ function App() {
         <Route exact path="/">
           <Section title="Skills">
             <div className="subsection">
-              <div style={{marginRight: "-1rem"}}>
-                React, JavaScript, TypeScript, MongoDB, Wasm,
-                WebAudio/WebMidi, Python, Bash/Linux, C, Web Scraping, Node.js
+              <div style={{ marginRight: "-1rem" }}>
+                React, JavaScript, TypeScript, MongoDB, Wasm, WebAudio/WebMidi,
+                Python, Bash/Linux, C, Web Scraping, Node.js
               </div>
               <div></div>
               <div></div>
@@ -251,14 +251,16 @@ function App() {
                   to keep the event loop going without needing WebWorkers
                 </li>
               </ul>
-              <div style={{ display: "flex" }}>
-                <Link
-                  className="button"
-                  style={{ textDecoration: "none" }}
-                  to="oggmented"
-                >
-                  Tell me more about oggmented
-                </Link>
+              <div className="screen">
+                <div style={{ display: "flex" }}>
+                  <Link
+                    className="button"
+                    style={{ textDecoration: "none" }}
+                    to="oggmented"
+                  >
+                    Tell me more about oggmented
+                  </Link>
+                </div>
               </div>
             </SubSection>
             <SubSection
