@@ -27,7 +27,6 @@ const OggmentedContent = () => {
           ogg vorbis. This is expected for Safari, and all the iOS browsers.{" "}
         </b>
         {differentBrowsersNote}
-
       </p>
     ),
     blink: (
@@ -38,7 +37,14 @@ const OggmentedContent = () => {
             vorbis support. This is expected for Browsers using the Blink
             engine: Brave, Opera, Chrome, etc.{" "}
           </b>{" "}
-          Blink uses ffmpeg to decode vorbis, which has a bug specific to vorbis
+          Blink uses{" "}
+          <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=456252">
+            ffmpeg to decode vorbis
+          </a>
+          , which has{" "}
+          <a href="https://trac.ffmpeg.org/ticket/6367">
+            a bug specific to vorbis
+          </a>{" "}
           where it adds a few extra samples at the end, resulting in a popping
           sound if you were to loop some audio that’s meant to sound smooth when
           looped. For example with the file produced by{" "}
