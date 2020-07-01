@@ -3,8 +3,8 @@ import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
 
-// const oggmentedContent = import("./OggmentedContent");
-const OggmentedContent = lazy(() => import("./OggmentedContent"));
+const oggmentedContent = import("./OggmentedContent");
+const OggmentedContent = lazy(() => oggmentedContent);
 // oggmentedContent()
 
 //  const section1 =  {
