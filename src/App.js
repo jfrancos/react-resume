@@ -1,10 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
 const oggmentedContent = () => import('./OggmentedContent')
 const OggmentedContent = lazy(oggmentedContent);
-oggmentedContent()
+// oggmentedContent()
 
 //  const section1 =  {
 //     trio: [
@@ -19,6 +19,9 @@ oggmentedContent()
 //   }
 
 function App() {
+  useEffect(() => {
+    oggmentedContent()
+  }, [])
   return (
     <div className="content">
       <div id="header">
