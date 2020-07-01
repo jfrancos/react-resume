@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
-import OggmentedContent from "./OggmentedContent";
+const oggmentedContent = () => import('./OggmentedContent')
+const OggmentedContent = lazy(oggmentedContent);
+oggmentedContent()
 
 //  const section1 =  {
 //     trio: [
@@ -53,7 +55,9 @@ function App() {
       </div>
       <div id="content">
         <Route path="/oggmented">
+          <Suspense fallback={() => null}>
           <OggmentedContent />
+          </Suspense>
         </Route>
         <Route exact path="/">
           <Section title="Skills">
