@@ -1,9 +1,9 @@
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
-const oggmentedContent = () => import('./OggmentedContent')
-const OggmentedContent = lazy(oggmentedContent);
+const oggmentedContent = import("./OggmentedContent");
+const OggmentedContent = lazy(() => oggmentedContent);
 // oggmentedContent()
 
 //  const section1 =  {
@@ -19,9 +19,9 @@ const OggmentedContent = lazy(oggmentedContent);
 //   }
 
 function App() {
-  useEffect(() => {
-    oggmentedContent()
-  }, [])
+  // useEffect(() => {
+  //   oggmentedContent()
+  // }, [])
   return (
     <div className="content">
       <div id="header">
@@ -58,8 +58,8 @@ function App() {
       </div>
       <div id="content">
         <Route path="/oggmented">
-          <Suspense fallback={() => null}>
-          <OggmentedContent />
+          <Suspense fallback={null}>
+            <OggmentedContent />
           </Suspense>
         </Route>
         <Route exact path="/">
