@@ -2,8 +2,9 @@ import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
-const oggmentedContent = import("./OggmentedContent");
-const OggmentedContent = lazy(() => oggmentedContent);
+
+// const oggmentedContent = import("./OggmentedContent");
+const OggmentedContent = lazy(() => import("./OggmentedContent"));
 // oggmentedContent()
 
 //  const section1 =  {
