@@ -1,6 +1,8 @@
 @font-face {
   font-family: bodoni;
-  src: url("bauer_bodoni_d_demi_bold-webfont.woff");
+  /* src: url("bauer_bodoni_d_demi_bold-webfont.woff"); */
+  src: url("BauerBodD-DemiBold.woff2");
+  /* fontfile stripped to contain only basic latin using FontForge */
   /* font-display: swap; */
 }
 

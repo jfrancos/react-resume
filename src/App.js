@@ -1,10 +1,14 @@
-import React, { Suspense, lazy } from "react";
 import "./App.css";
+import React, { Suspense, lazy } from "react";
 import { isMobile } from "react-device-detect";
 import { Link, Route } from "react-router-dom";
 
-const oggmentedContent = import("./OggmentedContent");
-const OggmentedContent = lazy(() => oggmentedContent);
+const oggmentedContent = () => import("./OggmentedContent");
+const OggmentedContent = lazy(oggmentedContent);
+// delay needed for preload for react-snap + lazy + preload:
+setTimeout(oggmentedContent, 2000)
+
+// seems to work in dev mode but doesn't do the right thing when published?
 // oggmentedContent()
 
 //  const section1 =  {
@@ -20,9 +24,6 @@ const OggmentedContent = lazy(() => oggmentedContent);
 //   }
 
 function App() {
-  // useEffect(() => {
-  //   oggmentedContent()
-  // }, [])
   return (
     <div className="content">
       <div id="header">
