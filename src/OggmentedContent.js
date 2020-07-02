@@ -264,7 +264,9 @@ const ReaderDemo = () => {
         </a>{" "}
         is a library that decodes vorbis using its own JavaScript and Wasm,
         transpiled from Xiph’s libvorbis C libraries, rather than using the
-        browser’s built in audio decoding support.
+        browser’s built in audio decoding support. I initially wrote it to
+        compensate for Safari’s lack of support, but along the way I realized
+        it’s also useful in Blink browsers, where vorbis decoding is buggy.
       </p>
 
       <button

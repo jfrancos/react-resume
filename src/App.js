@@ -8,6 +8,7 @@ const OggmentedContent = lazy(oggmentedContent);
 // delay needed for preload for react-snap + lazy + preload:
 setTimeout(oggmentedContent, 2000)
 
+
 // seems to work in dev mode but doesn't do the right thing when published?
 // oggmentedContent()
 
@@ -383,8 +384,11 @@ const SubSection = ({ header, children }) => (
 
 const Section = ({ title, children }) => (
   <>
+  {/* <div className="section"> */}
     <div className="section-title">{title}</div>
     <hr />
+    {/* {children[0]} */}
+    {/* </div> */}
     <div className="section">{children}</div>
   </>
 );
