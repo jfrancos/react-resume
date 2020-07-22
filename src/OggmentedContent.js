@@ -16,8 +16,7 @@ const OggmentedContent = () => {
     oggmentedContext.nativeVorbisLevel().then((level) => setBrowser(level));
   }, [oggmentedContext]);
 
-  const differentBrowsersNote = `The content of this page is different depending on which engine is present.  Check out the Blink version (Brave/Opera/Chrome)  for an interesting demo
-  of its buggy vorbis decoding implementation.`;
+  const differentBrowsersNote = `The content of this page is different depending on which engine is present.  Check out the Blink version (Brave/Opera/Chrome) for a demo of its buggy vorbis decoding implementation.`;
 
   const content = {
     webkit: (
@@ -217,6 +216,10 @@ const LoopDemo = () => {
         33075 samples, which is a reasonable number of samples to see for 0.75s
         of 44100 Hz audio. The native AudioContext however, has{" "}
         {nativeTriangleBuffer && nativeTriangleBuffer.length} samples.
+      </p>
+      <br/>
+      <p>
+        Note: If you’re seeing the above console demo and you’re using Firefox, consider it a bug (in my page).  It won’t demonstrate anything interesting in Firefox, and is just showing up because your computer’s audio output is currently set to run at something other than 44,100 Hz, and Firefox is resampling the audio to that rate (the code just looks at your native AudioContext capabilities, not your user-agent).  I’ll need to come up with a slight redesign to account for this, but in the short term I wanted to provide this info.
       </p>
     </>
   );
