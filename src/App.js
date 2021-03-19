@@ -69,7 +69,7 @@ function App() {
           <Section title="Skills">
             <div className="subsection">
               <div style={{ marginRight: "-1rem" }}>
-                React, JavaScript, TypeScript, MongoDB, Wasm, WebAudio/WebMidi,
+                React, JavaScript, FaunaDB, Wasm, WebAudio/WebMidi,
                 Python, Bash/Linux, C, Web Scraping, Node.js
               </div>
               <div></div>
@@ -82,7 +82,7 @@ function App() {
               header={[
                 "DITR Field Service Engineer @ AeroAstro",
                 "MIT",
-                "Aug 2019 – Present",
+                "Aug 2019 – Dec 2020",
               ]}
             >
               <ul>
