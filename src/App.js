@@ -69,8 +69,8 @@ function App() {
           <Section title="Skills">
             <div className="subsection">
               <div style={{ marginRight: "-1rem" }}>
-                React, JavaScript, FaunaDB, Wasm, WebAudio/WebMidi,
-                Python, Bash/Linux, C, Web Scraping, Node.js
+                React, Javascript, Tailwind, Stripe, Snowpack, Fauna, Netlify, RxDB, Offline-first, WebAudio/WebMidi,
+                Python, Linux
               </div>
               <div></div>
               <div></div>
