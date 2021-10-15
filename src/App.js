@@ -6,8 +6,7 @@ import { Link, Route } from "react-router-dom";
 const oggmentedContent = () => import("./OggmentedContent");
 const OggmentedContent = lazy(oggmentedContent);
 // delay needed for preload for react-snap + lazy + preload:
-setTimeout(oggmentedContent, 2000)
-
+setTimeout(oggmentedContent, 2000);
 
 // seems to work in dev mode but doesn't do the right thing when published?
 // oggmentedContent()
@@ -68,9 +67,9 @@ function App() {
         <Route exact path="/">
           <Section title="Skills">
             <div className="subsection">
-              <div style={{ marginRight: "-1rem" }}>
-                React, Javascript, Tailwind, Stripe, Snowpack, Fauna, Netlify, RxDB, Offline-first, WebAudio/WebMidi,
-                Python, Linux
+              <div style={{ marginRight: "-1.75rem", marginLeft: "-1.75rem" }}>
+                React, Javascript, Tailwind, Stripe, Snowpack, Fauna, GraphQL,
+                Magic, RxDB, Offline-first, WebAudio/WebMidi, Python, Linux
               </div>
               <div></div>
               <div></div>
@@ -214,25 +213,22 @@ function App() {
           >
             <SubSection
               header={[
-                <a href="https://github.com/jfrancos/search-children/blob/master/src/index.tsx">
-                  search-children
-                </a>,
-                "TypeScript, React",
-                "Published on npm, 2020",
+                <a href="https://github.com/jfrancos/crancos">crancos</a>,
+                "Javascript, React, Stripe, RxDB, Tailwind, Fauna, Magic",
+                "Published on npm, 2021",
               ]}
             >
               <ul>
                 <li>
-                  React component allows SPA-wide text search and highlight,
-                  callback indicates number of results
+                  CRA style template creates reactive, offline-first user-document React apps with Fauna, RxDB, and Magic
                 </li>
                 <li>
-                  Searches elements recursively for children that are strings,
-                  then searches those strings for the specified text
+                  Scripts provision Fauna to work with RxDB, and setup Stripe
+                  with customer-portal-managed subscriptions
                 </li>
                 <li>
-                  Companion component Pierce allows embedded text not derived
-                  from children to be searched and marked
+                  Put Fauna, Magic, and Stripe keys in a dotenv file and have a
+                  working demo running in under five minutes
                 </li>
               </ul>
             </SubSection>
@@ -384,7 +380,7 @@ const SubSection = ({ header, children }) => (
 
 const Section = ({ title, children }) => (
   <>
-  {/* <div className="section"> */}
+    {/* <div className="section"> */}
     <div className="section-title">{title}</div>
     <hr />
     {/* {children[0]} */}
